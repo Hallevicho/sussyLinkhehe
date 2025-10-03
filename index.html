@@ -25,20 +25,24 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap; /* makes it wrap on very small screens */
+      flex-wrap: wrap;
       gap: 10px;
       margin-top: 20px;
     }
 
     .text-with-gif h2 {
-      font-size: clamp(18px, 5vw, 28px); /* responsive text size */
-      font-weight: normal;
-      color: #333;
+      font-size: clamp(20px, 6vw, 32px); /* slightly bigger on mobile */
+      font-weight: bold;
       margin: 0;
+      background: linear-gradient(90deg, #ff6ec7, #ffb347); /* pink-orange gradient */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      font-family: "Comic Sans MS", cursive, sans-serif; /* fun fallback font */
     }
 
     .text-with-gif img {
-      width: 40px;  /* smaller on mobile */
+      width: 50px;  /* slightly bigger heart gif */
       height: auto;
     }
   </style>
