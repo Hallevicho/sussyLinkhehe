@@ -30,19 +30,29 @@
       margin-top: 20px;
     }
 
-    .text-with-gif h2 {
-      font-size: clamp(20px, 6vw, 32px); /* slightly bigger on mobile */
+    .text-with-gif h2, .text-with-gif h3 {
       font-weight: bold;
       margin: 0;
-      background: linear-gradient(90deg, #ff6ec7, #ffb347); /* pink-orange gradient */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+
+    .text-with-gif h2 {
+      font-size: clamp(20px, 6vw, 32px);
+      background: linear-gradient(90deg, #ff6ec7, #ffb347);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-      font-family: "Comic Sans MS", cursive, sans-serif; /* fun fallback font */
+    }
+
+    .text-with-gif h3 {
+      font-size: clamp(18px, 5vw, 28px);
+      background: linear-gradient(90deg, #ff4d4d, #ff99cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .text-with-gif img {
-      width: 50px;  /* slightly bigger heart gif */
+      width: 50px;
       height: auto;
     }
   </style>
@@ -55,6 +65,12 @@
   <div class="text-with-gif">
     <h2>𝑯𝑨𝑷𝑷𝒀 𝑩𝑶𝒀𝑭𝑹𝑰𝑬𝑵𝑫 𝑫𝑨𝒀 𝑳𝑶𝑽𝑬!!</h2>
     <img src="images/kissing_15600682.gif" alt="Couple Heart Gif">
+  </div>
+
+  <!-- Second line of text + lips GIF -->
+  <div class="text-with-gif" style="margin-top: 10px;">
+    <h3>𝐼 𝐿𝑂𝑉𝐸 𝒴𝒪𝒰 𝐴𝐿𝒲𝐴𝒴𝒮 𝐿𝒪𝒱𝐸</h3>
+    <img src="images/lips_15600643.gif" alt="Lips Gif">
   </div>
 </body>
 </html>
