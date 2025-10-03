@@ -14,63 +14,47 @@
       margin: 0;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
-
-    .text-with-gif {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .text-with-gif h2, .text-with-gif h3 {
+    .text-block h2, .text-block h3 {
       font-weight: bold;
-      margin: 0;
+      margin: 10px 0;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
       font-family: "Comic Sans MS", cursive, sans-serif;
     }
 
-    .text-with-gif h2 {
+    .text-block h2 {
       font-size: clamp(20px, 6vw, 32px);
       background: linear-gradient(90deg, #ff6ec7, #ffb347);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .text-with-gif h3 {
+    .text-block h3 {
       font-size: clamp(18px, 5vw, 28px);
       background: linear-gradient(90deg, #ff4d4d, #ff99cc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .text-with-gif img {
-      width: 50px;
+    img {
+      max-width: 100%;
       height: auto;
+      border-radius: 12px;
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
-  <!-- First Gif -->
+
+  <!-- Text block -->
+  <div class="text-block">
+    <h2>HAPPY BOYFRIENDS DAY</h2>
+    <h3>I LOVE YOU ALWAYS LOVE</h3>
+  </div>
+
+  <!-- GIFs below the text -->
+  <img src="images/kissing_15600682.gif" alt="Couple Heart Gif">
+  <img src="images/lips_15600643.gif" alt="Lips Gif">
   <img src="images/hug-kiss.gif" alt="Couple Gif">
 
-  <!-- Fancy Text + Couple Heart Gif -->
-  <div class="text-with-gif">
-    <h2>𝑯𝑨𝑷𝑷𝒀 𝑩𝑶𝒀𝑭𝑹𝑰𝑬𝑵𝑫 𝑫𝑨𝒀 𝑳𝑶𝑽𝑬!!</h2>
-    <img src="images/kissing_15600682.gif" alt="Couple Heart Gif">
-  </div>
-
-  <!-- Second line of text + lips GIF -->
-  <div class="text-with-gif" style="margin-top: 10px;">
-    <h3>𝐼 𝐿𝑂𝑉𝐸 𝒴𝒪𝒰 𝐴𝐿𝒲𝐴𝒴𝒮 𝐿𝒪𝒱𝐸</h3>
-    <img src="images/lips_15600643.gif" alt="Lips Gif">
-  </div>
 </body>
 </html>
