@@ -14,18 +14,11 @@
       margin: 0;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
-
     .text-with-gif {
       display: flex;
+      flex-direction: column; /* stack text vertically */
       justify-content: center;
       align-items: center;
-      flex-direction: column; /* stack text vertically */
       gap: 10px;
       margin-top: 20px;
     }
@@ -34,7 +27,7 @@
       font-weight: bold;
       margin: 0;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-family: "Mono Upper", monospace, sans-serif; /* fallback if font not available */
     }
 
     .text-with-gif h2 {
@@ -49,23 +42,42 @@
       background: linear-gradient(90deg, #ff4d4d, #ff99cc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 1s; /* appear 1 second after h2 */
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .text-with-gif img {
       width: 50px;
       height: auto;
+      margin-top: 10px;
+    }
+
+    img.main-gif {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <!-- First Gif -->
-  <img src="images/hug-kiss.gif" alt="Couple Gif">
 
-  <!-- Text + GIF -->
+  <!-- First main GIF -->
+  <img class="main-gif" src="images/hug-kiss.gif" alt="Couple Gif">
+
+  <!-- Text + GIFs -->
   <div class="text-with-gif">
-    <h2>𝑯𝑨𝑷𝑷𝒀 𝑩𝑶𝒀𝑭𝑹𝑰𝑬𝑵𝑫 𝑫𝑨𝒀 𝑳𝑶𝑽𝑬!!</h2>
-    <h3>I LOVE YOU ALWAYS LOVE</h3>
+    <h2>HAPPY BOYFRIENDS DAY</h2>
+    <h3>ɪ ʟᴏᴠᴇ ʏᴏᴜ ᴀʟᴡᴀʏꜱ ʟᴏᴠᴇ</h3>
     <img src="images/kissing_15600682.gif" alt="Couple Heart Gif">
+    <img src="images/lips_15600643.gif" alt="Lips Gif">
   </div>
+
 </body>
 </html>
