@@ -16,7 +16,7 @@
 
     .text-with-gif {
       display: flex;
-      flex-direction: column; /* stack text vertically */
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 10px;
@@ -26,36 +26,39 @@
     .text-with-gif h2, .text-with-gif h3 {
       font-weight: bold;
       margin: 0;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-      font-family: "Mono Upper", monospace, sans-serif; /* fallback if font not available */
+      font-family: "Mono Upper", monospace, sans-serif; /* no cursive */
+      letter-spacing: 2px;
+      text-shadow: 
+        2px 2px 4px rgba(0,0,0,0.3),
+        0 0 8px rgba(255, 105, 180, 0.5); /* subtle glow */
     }
 
     .text-with-gif h2 {
-      font-size: clamp(20px, 6vw, 32px);
-      background: linear-gradient(90deg, #ff6ec7, #ffb347);
+      font-size: clamp(22px, 6vw, 36px);
+      background: linear-gradient(135deg, #ff6ec7, #ffb347, #6a5aff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .text-with-gif h3 {
       font-size: clamp(18px, 5vw, 28px);
-      background: linear-gradient(90deg, #ff4d4d, #ff99cc);
+      background: linear-gradient(135deg, #ff4d4d, #ff99cc, #ffde59);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      opacity: 0;
-      animation: fadeIn 2s ease forwards;
-      animation-delay: 1s; /* appear 1 second after h2 */
+      opacity: 1;
+      letter-spacing: 1.5px;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
+    .gif-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
     }
 
-    .text-with-gif img {
+    .gif-row img {
       width: 50px;
       height: auto;
-      margin-top: 10px;
     }
 
     img.main-gif {
@@ -73,10 +76,14 @@
 
   <!-- Text + GIFs -->
   <div class="text-with-gif">
-    <h2>HAPPY BOYFRIENDS DAY</h2>
+    <h2>HAPPY BOYFRIENDS DAY!!</h2>
     <h3>ɪ ʟᴏᴠᴇ ʏᴏᴜ ᴀʟᴡᴀʏꜱ ʟᴏᴠᴇ</h3>
-    <img src="images/kissing_15600682.gif" alt="Couple Heart Gif">
-    <img src="images/lips_15600643.gif" alt="Lips Gif">
+
+    <!-- GIFs side by side -->
+    <div class="gif-row">
+      <img src="images/kissing_15600682.gif" alt="Couple Heart Gif">
+      <img src="images/lips_15600643.gif" alt="Lips Gif">
+    </div>
   </div>
 
 </body>
